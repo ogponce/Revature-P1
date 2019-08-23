@@ -1,0 +1,17 @@
+/Users/Oscar/revature/Project0/PizzaBox.Test/bin/Debug/netcoreapp2.2/xunit.runner.visualstudio.dotnetcore.testadapter.dll
+/Users/Oscar/revature/Project0/PizzaBox.Test/bin/Debug/netcoreapp2.2/xunit.runner.reporters.netcoreapp10.dll
+/Users/Oscar/revature/Project0/PizzaBox.Test/bin/Debug/netcoreapp2.2/xunit.runner.utility.netcoreapp10.dll
+/Users/Oscar/revature/Project0/PizzaBox.Test/bin/Debug/netcoreapp2.2/PizzaBox.Test.deps.json
+/Users/Oscar/revature/Project0/PizzaBox.Test/bin/Debug/netcoreapp2.2/PizzaBox.Test.runtimeconfig.json
+/Users/Oscar/revature/Project0/PizzaBox.Test/bin/Debug/netcoreapp2.2/PizzaBox.Test.runtimeconfig.dev.json
+/Users/Oscar/revature/Project0/PizzaBox.Test/bin/Debug/netcoreapp2.2/PizzaBox.Test.dll
+/Users/Oscar/revature/Project0/PizzaBox.Test/bin/Debug/netcoreapp2.2/PizzaBox.Test.pdb
+/Users/Oscar/revature/Project0/PizzaBox.Test/bin/Debug/netcoreapp2.2/PizzaBox.Domain.dll
+/Users/Oscar/revature/Project0/PizzaBox.Test/bin/Debug/netcoreapp2.2/PizzaBox.Domain.pdb
+/Users/Oscar/revature/Project0/PizzaBox.Test/obj/Debug/netcoreapp2.2/PizzaBox.Test.csprojAssemblyReference.cache
+/Users/Oscar/revature/Project0/PizzaBox.Test/obj/Debug/netcoreapp2.2/PizzaBox.Test.csproj.CoreCompileInputs.cache
+/Users/Oscar/revature/Project0/PizzaBox.Test/obj/Debug/netcoreapp2.2/PizzaBox.Test.AssemblyInfoInputs.cache
+/Users/Oscar/revature/Project0/PizzaBox.Test/obj/Debug/netcoreapp2.2/PizzaBox.Test.AssemblyInfo.cs
+/Users/Oscar/revature/Project0/PizzaBox.Test/obj/Debug/netcoreapp2.2/PizzaBox.Test.csproj.CopyComplete
+/Users/Oscar/revature/Project0/PizzaBox.Test/obj/Debug/netcoreapp2.2/PizzaBox.Test.dll
+/Users/Oscar/revature/Project0/PizzaBox.Test/obj/Debug/netcoreapp2.2/PizzaBox.Test.pdb
