@@ -11,5 +11,6 @@ namespace PizzaBox.Domain.Abstracts
     public List<Topping> Toppings { get; set; }
 
     public decimal TotalPrice {get;set;}
+
   }
 }

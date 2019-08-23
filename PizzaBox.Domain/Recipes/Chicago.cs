@@ -7,7 +7,7 @@ namespace PizzaBox.Domain.Recipes
 {
   public class Chicago : APizzaMaker
   {
-    public override APizza Make()
+    public override Pizza Make()
     {
       Pizza c = new Pizza();
       c.Name = "Chicago"; 

@@ -9,7 +9,7 @@ namespace PizzaBox.Domain.Recipes
   {
     public decimal TotalPrice {get;set;}
 
-    public APizza Make(string s, string c, List<string> t)
+    public Pizza Make(string s, string c, List<string> t)
     {
       Pizza custom = new Pizza();
       custom.Name = "Custom"; 
@@ -28,12 +28,12 @@ namespace PizzaBox.Domain.Recipes
         i++;
       }
       
-      if(custom.Size.Name.Length <= 5){
+      if(custom.Size.Name.Length < 5){
         custom.Size = new Size("Medium");
       }
 
-      if(custom.Crust.Name.Length <= 4){
-        custom.Crust = new Crust("Medium");
+      if(custom.Crust.Name.Length < 4){
+        custom.Crust = new Crust("Traditional");
       }
 
       if(custom.Toppings.Capacity <= 2)
@@ -44,16 +44,16 @@ namespace PizzaBox.Domain.Recipes
         };      
       }
       
-      calculatePrice(custom.Size.Price,custom.Crust.Price,custom.Toppings);
+      TotalPrice = calculatePrice(custom.Size.Price,custom.Crust.Price,custom.Toppings);
       return custom;   
     }
 
-    public void calculatePrice(decimal s, decimal c, List<Topping> t)
+    public decimal calculatePrice(decimal s, decimal c, List<Topping> t)
     {
-      TotalPrice = s + c + (t.Count * (0.5M));
+      return s + c + (t.Count * (0.5M));
     }
 
-    public override APizza Make()
+    public override Pizza Make()
     {
       throw new System.NotImplementedException();
     }

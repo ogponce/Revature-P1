@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using PizzaBox.Domain.Abstracts;
+//using db = PizzaBox.Entities;
 
 namespace PizzaBox.Domain.Models
 {
@@ -7,7 +8,7 @@ namespace PizzaBox.Domain.Models
   {
     public Location l {get;set;}
     public User u {get;set;}
-    public List<APizza> Pizzas {get;set;}
+    public List<Pizza> Pizzas {get;set;}
     public decimal TotalPrice {get; set;}
 
     public void calculate(){
@@ -18,10 +19,6 @@ namespace PizzaBox.Domain.Models
         if(Pizzas[i].Name.Length >= 1){
           TotalPrice += Pizzas[i].TotalPrice;
         }
-
-        // TotalPrice += Pizzas[i].Crust.Price;
-        // TotalPrice += Pizzas[i].Size.Price;
-       // TotalPrice += Pizzas[i].Toppings[i].Price;
       }     
     }
 
@@ -35,7 +32,7 @@ namespace PizzaBox.Domain.Models
     }
 
     public Order(){
-        Pizzas = new List<APizza>();
+        Pizzas = new List<Pizza>();
     }
 
 

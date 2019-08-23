@@ -10,15 +10,16 @@ namespace PizzaBox.Client
     {
       public static List<User> u = new List<User>();
 
-      public static List<Location> l = new List<Location>();
+      public static List<Location> ListofLocations = new List<Location>();
         static void Main(string[] args)
         {
             makeLocation();
             displayLocations();
-            makeUser();
             makeNewYork();
+            EatPizza();
+
             makeInventory();
-            //EatPizza();
+            makeUser();
         }
 
         public static void makeNewYork()
@@ -39,7 +40,7 @@ namespace PizzaBox.Client
 
         public static void makeUser()
         {
-          Location loc = l[0];
+          Location loc = ListofLocations[0];
           User u1 = new User("Iron","Man");
           User u2 = new User("Spider", "Man");
           loc.Users.Add(u1);
@@ -48,7 +49,7 @@ namespace PizzaBox.Client
         }
         
         public static void makeLocation(){
-          l = new List<Location>
+          ListofLocations = new List<Location>
           {
             new Location("101 Abcde Street", "Arlington", "Texas"),
             new Location("UTA Street","Arlington","Texas"),
@@ -57,11 +58,14 @@ namespace PizzaBox.Client
             new Location("Airport Fwy Street","Dallas","Texas"),
             new Location("Fourth Street","Houston","Texas")
           };
+          Location create = new Location("","","");
+          create.loc = new List<Location>();
+          create.loc= ListofLocations;
         }
 
         public static void displayLocations(){
           System.Console.WriteLine("\nHere is a list of our locations: ");
-          foreach (var v in l)
+          foreach (var v in ListofLocations)
           {
             System.Console.WriteLine("\t" + v.address.Street + ", "+ v.address.City+", " + v.address.StateProvince);
           }
@@ -71,7 +75,7 @@ namespace PizzaBox.Client
         {
           Order o = new Order();
           List<string> t = new List<string>{"Pepperoni", "Cheese", "Bacon"};
-          o.Pizzas = new List<APizza>
+          o.Pizzas = new List<Pizza>
           {
             new Custom().Make("Small", "Stuffed",t),
             // new NewYork(), new Chicago(),
@@ -82,37 +86,36 @@ namespace PizzaBox.Client
 
         public static void EatPizza()
         {
-          var l1 = new Location("111 A St", "Arl", "TX");
+          var l1 = ListofLocations[0];
           var o = l1.MakeOrder();
           List<string> t = new List<string>{"Pepperoni", "Cheese", "Bacon"};
-          //o.Pizzas.Add();
           var p = new Custom().Make("Small","Thin",t);
+          //o.Pizzas.Add(p);
           
-
           l1.TakeOrder(o,p);
           foreach(var ol in l1.Orders){
-            foreach(var pi in l1.Orders){
-              System.Console.WriteLine(pi);
+            foreach(var pi in o.Pizzas){
+              System.Console.WriteLine("You have added a " + pi.Size.Name + " "+ pi.Name+ " pizza with a " + pi.Crust.Name + " crust.");
+              // System.Console.ReadLine("Would you like to add anything else?");
             }
           }
         }
 
         public static void makeInventory()
         {
-          l[0].Inventory = new Dictionary<string, int>();
-          l[0].Inventory.Add("Small Dough",50);
-          l[0].Inventory.Add("Medium Dough",50);
-          l[0].Inventory.Add("Large Dough",50);
-          l[0].Inventory.Add("Thin Crust",50);
-          l[0].Inventory.Add("Stuffed Crust",50);
-          l[0].Inventory.Add("Traditional Crust",50);
-          l[0].Inventory.Add("Deep Dish Crust",50);
-          l[0].Inventory.Add("Pepperonis",500);
-          l[0].Inventory.Add("Cheese (per Pizza)",50);
-          l[0].Inventory.Add("Bacon",5000);
-          l[0].Inventory.Add("Mushrooms",500);
-          l[0].printInventory();
-
+          ListofLocations[0].Inventory = new Dictionary<string, int>();
+          ListofLocations[0].Inventory.Add("Small Dough",50);
+          ListofLocations[0].Inventory.Add("Medium Dough",50);
+          ListofLocations[0].Inventory.Add("Large Dough",50);
+          ListofLocations[0].Inventory.Add("Thin Crust",50);
+          ListofLocations[0].Inventory.Add("Stuffed Crust",50);
+          ListofLocations[0].Inventory.Add("Traditional Crust",50);
+          ListofLocations[0].Inventory.Add("Deep Dish Crust",50);
+          ListofLocations[0].Inventory.Add("Pepperonis",500);
+          ListofLocations[0].Inventory.Add("Cheese (per Pizza)",50);
+          ListofLocations[0].Inventory.Add("Bacon",5000);
+          ListofLocations[0].Inventory.Add("Mushrooms",500);
+          ListofLocations[0].printInventory();
         }
 
 

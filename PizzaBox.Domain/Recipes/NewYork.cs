@@ -9,7 +9,7 @@ namespace PizzaBox.Domain.Recipes
   {
     public const decimal TotalPrice = 7;
 
-    public override APizza Make()
+    public override Pizza Make()
     {
       Pizza c = new Pizza();
       c.Name = "New York"; 

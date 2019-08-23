@@ -18,7 +18,7 @@ namespace PizzaBox.Tests
     //Act
     var act = truepizza.Crust.Name;
     
-    System.Console.WriteLine(act + " "+expected );
+    // System.Console.WriteLine(act + " "+expected );
     //Assert
     Assert.True(expected.CompareTo(act) == 0);
     }

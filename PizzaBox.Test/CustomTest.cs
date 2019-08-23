@@ -45,7 +45,7 @@ namespace PizzaBox.Tests
     Custom c = new Custom();
     List<string> t = new List<string>{"Pepperoni", "Cheese"};
     var truepizza = c.Make("Small","Thin",t);
-    var expected = 5;
+    var expected = 6;
     //Act
     var act = truepizza.TotalPrice;
     System.Console.WriteLine(act + " "+expected );

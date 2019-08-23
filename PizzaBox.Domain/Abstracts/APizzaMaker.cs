@@ -5,6 +5,6 @@ namespace PizzaBox.Domain.Abstracts
 {
   public abstract class APizzaMaker //PizzaMaker
   {
-  public abstract APizza Make();
+  public abstract Pizza Make();
   }
 }
