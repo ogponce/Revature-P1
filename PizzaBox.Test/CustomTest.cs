@@ -45,12 +45,12 @@ namespace PizzaBox.Tests
     Custom c = new Custom();
     List<string> t = new List<string>{"Pepperoni", "Cheese"};
     var truepizza = c.Make("Small","Thin",t);
-    var expected = 6;
+    var expected = 5;
     //Act
-    var act = truepizza.TotalPrice;
+    //truepizza.calculatePrice();
+    var act = c.TotalPrice;
     System.Console.WriteLine(act + " "+expected );
     //Assert
-    
     Assert.True(expected == act);
     }
 

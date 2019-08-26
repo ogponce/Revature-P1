@@ -7,3 +7,6 @@
 /Users/Oscar/revature/Project0/PizzaBox.Domain/obj/Debug/netstandard2.0/PizzaBox.Domain.AssemblyInfo.cs
 /Users/Oscar/revature/Project0/PizzaBox.Domain/obj/Debug/netstandard2.0/PizzaBox.Domain.dll
 /Users/Oscar/revature/Project0/PizzaBox.Domain/obj/Debug/netstandard2.0/PizzaBox.Domain.pdb
+/Users/Oscar/revature/Project0/PizzaBox.Domain/bin/Debug/netstandard2.0/PizzaBox.Data.dll
+/Users/Oscar/revature/Project0/PizzaBox.Domain/bin/Debug/netstandard2.0/PizzaBox.Data.pdb
+/Users/Oscar/revature/Project0/PizzaBox.Domain/obj/Debug/netstandard2.0/PizzaBox.Domain.csproj.CopyComplete

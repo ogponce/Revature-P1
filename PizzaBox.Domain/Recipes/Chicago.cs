@@ -19,7 +19,7 @@ namespace PizzaBox.Domain.Recipes
       };
       
       c.Size = new Size("Large");
-      c.TotalPrice =7;
+      c.TotalPrice =7.00M;
 
       
       return c;

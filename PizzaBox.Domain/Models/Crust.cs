@@ -4,7 +4,9 @@ namespace PizzaBox.Domain.Models
 {
   public class Crust : AIngredient
   {
-   public Crust(string name) : base(name){} 
+   public Crust(string name) : base(name){
+     crustPrices();
+   } 
 
    public decimal crustPrices(){
       if (Name.Equals("Thin") || Name.Equals("Deep Dish") || Name.Equals("Stuffed"))

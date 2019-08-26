@@ -51,7 +51,7 @@
             },
             "microsoft.entityframeworkcore.design": {
               "target": "Package",
-              "version": "(, )"
+              "version": "[2.2.6, )"
             },
             "microsoft.entityframeworkcore.sqlserver": {
               "target": "Package",

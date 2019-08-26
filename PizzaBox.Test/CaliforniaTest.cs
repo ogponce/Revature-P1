@@ -42,9 +42,9 @@ namespace PizzaBox.Tests
     //Arrange
     California c = new California();
     var truepizza = c.Make();
-    var expected = 7;
+    decimal expected = 7M;
     //Act
-    var act = truepizza.TotalPrice;
+    decimal act = truepizza.TotalPrice;
     //System.Console.WriteLine(act + " "+expected );
     //Assert
     

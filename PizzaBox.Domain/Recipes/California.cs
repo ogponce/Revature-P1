@@ -7,8 +7,6 @@ namespace PizzaBox.Domain.Recipes
 
   public class California : APizzaMaker
   {
-    public const decimal TotalPrice = 7;
-
     public override Pizza Make()
     {
       Pizza c = new Pizza();
@@ -21,7 +19,7 @@ namespace PizzaBox.Domain.Recipes
       };
       
       c.Size = new Size("Large");
-      c.TotalPrice =7;
+      c.TotalPrice =7.00M;
 
 
       return c;    }

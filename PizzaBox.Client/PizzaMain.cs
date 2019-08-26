@@ -15,36 +15,37 @@ namespace PizzaBox.Client
         {
             makeLocation();
             displayLocations();
-            makeNewYork();
+            //makeChicago();
             EatPizza();
 
             makeInventory();
             makeUser();
+            takeNewOrder();
         }
 
         public static void makeNewYork()
         {
           var ny = new NewYork();
           var newyork = ny.Make();
-          newyork.Size.Name = "Small";
           System.Console.WriteLine("Price of New York Pizza is: $" + newyork.TotalPrice);
         }
 
-        public void makeChicago()
+        public static void makeChicago()
         {
-          var chi = new NewYork();
-          var chicago = chi.Make();
-          chicago.Size.Name = "Small";
-          System.Console.WriteLine(chicago.TotalPrice);
+          var c = new Custom();
+          List<string> top = new List<string>{"Sauce","Cheese"};
+          var custom = c.Make("","", top);
+          System.Console.WriteLine("Total will be: " + c.TotalPrice);
         }
 
         public static void makeUser()
         {
           Location loc = ListofLocations[0];
-          User u1 = new User("Iron","Man");
-          User u2 = new User("Spider", "Man");
+          
+          //readline inputs for u1
+          //User u1 = new User("Iron","Man","111 A Street", "New York City", "New York");
+          User u1 = new User("Iron","Man","111 A Street", "New York City", "New York");
           loc.Users.Add(u1);
-          loc.Users.Add(u2);
           loc.printUsers();
         }
         
@@ -71,16 +72,28 @@ namespace PizzaBox.Client
           }
         }
 
-        public void makeOrder()
+        public static Order takeNewOrder()
         {
           Order o = new Order();
-          List<string> t = new List<string>{"Pepperoni", "Cheese", "Bacon"};
+          List<string> t = new List<string>{"Pepperoni"};
           o.Pizzas = new List<Pizza>
           {
             new Custom().Make("Small", "Stuffed",t),
-            // new NewYork(), new Chicago(),
-            // new California()
+            new NewYork().Make(), new Chicago().Make(),
+            new California().Make()
           };
+          int j = 0;
+          foreach(var pi in o.Pizzas){
+            System.Console.WriteLine("You have added a " + pi.Size.Name + " "+ pi.Name+ " pizza with a " + pi.Crust.Name + " crust. \t\t $" + pi.TotalPrice);
+            
+            for(int i = 0; i< o.Pizzas[j].Toppings.Count;i++){
+              System.Console.WriteLine("\tPizza comes with: " + o.Pizzas[j].Toppings[i].Name);
+            }
+            j++;
+            // System.Console.ReadLine("Would you like to add anything else?");
+          }
+
+          return o;
 
         }
 

@@ -18,15 +18,30 @@ namespace PizzaBox.Domain.Recipes
       custom.Toppings = new List<Topping>();
 
       int i = 0;
-      foreach(var v in t){
+      if(t.Count < 2)
+      {
+        custom.Toppings = new List<Topping>
+        {
+          new Topping("Sauce"), new Topping("Cheese"),
+        };      
+        System.Console.WriteLine("Topping: " + custom.Toppings[0].Name+" has been added!");
+        System.Console.WriteLine("Topping: " + custom.Toppings[1].Name+" has been added!");
+      }
+      else 
+      {
+        foreach(var v in t){
         if(i<5){
           custom.Toppings.Add(new Topping(v));
+          System.Console.WriteLine("Topping: " + v+" has been added!");
         }
+        
         else{
           break;
         }
         i++;
       }
+      }
+      
       
       if(custom.Size.Name.Length < 5){
         custom.Size = new Size("Medium");
@@ -36,21 +51,17 @@ namespace PizzaBox.Domain.Recipes
         custom.Crust = new Crust("Traditional");
       }
 
-      if(custom.Toppings.Capacity <= 2)
-      {
-        custom.Toppings = new List<Topping>
-        {
-          new Topping("Pepperoni"), new Topping("Cheese"),
-        };      
-      }
       
-      TotalPrice = calculatePrice(custom.Size.Price,custom.Crust.Price,custom.Toppings);
+
+      
+      custom.TotalPrice = calculatePrice(custom.Size.Price,custom.Crust.Price,custom.Toppings);
+      
       return custom;   
     }
 
-    public decimal calculatePrice(decimal s, decimal c, List<Topping> t)
+    public decimal calculatePrice(decimal s, decimal c, List<Topping> top)
     {
-      return s + c + (t.Count * (0.5M));
+      return s + c + (top.Count * (0.50M));
     }
 
     public override Pizza Make()
