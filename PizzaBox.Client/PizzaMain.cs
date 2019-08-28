@@ -13,13 +13,15 @@ namespace PizzaBox.Client
       public static List<Location> ListofLocations = new List<Location>();
         static void Main(string[] args)
         {
-            makeLocation();
-            displayLocations();
-            //makeChicago();
-            EatPizza();
+            Menu m = new Menu();
+            m.Start();
+            // makeLocation();
+            // displayLocations();
+            // //makeChicago();
+            // EatPizza();
 
-            makeInventory();
-            makeUser();
+            // makeInventory();
+            // makeUser();
             takeNewOrder();
         }
 
