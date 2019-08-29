@@ -12,15 +12,15 @@ namespace PizzaBox.Domain.Models
     public decimal sizePrices(){
       if (Name.CompareTo("Small")==0)
       {
-        return Price = 3;
+        return Price = 4;
       }
       else if (Name.CompareTo("Medium") ==0)
       {
-        return Price = 4;
+        return Price = 5;
       }
       else if (Name.CompareTo("Large") == 0)
       {
-        return Price = 5;
+        return Price = 6;
       }
       else
       {

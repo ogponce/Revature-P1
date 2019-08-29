@@ -60,6 +60,8 @@ namespace PizzaBox.Domain.Models
       Users = new List<User>();
     }
 
+    public Location(){}
+
     public void printUsersOrder()
     {
       System.Console.WriteLine("Here is what you ordered: ");

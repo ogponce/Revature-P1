@@ -9,12 +9,15 @@ namespace PizzaBox.Domain.Models
    } 
 
    public decimal crustPrices(){
-      if (Name.Equals("Thin") || Name.Equals("Deep Dish") || Name.Equals("Stuffed"))
+      if (Name.Equals("Deep Dish") || Name.Equals("Stuffed"))
       {
         return Price = 1;
       }
-      else
+      else if(Name.Equals("Thin")||Name.Equals("Traditional"))
       {
+        return Price = 0;
+      }
+      else {
         System.Console.WriteLine("Traditional it is!");
         return Price = 0;
       }

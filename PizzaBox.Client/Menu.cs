@@ -10,7 +10,6 @@ namespace PizzaBox.Client
   {
     private static PizzaWorldDBContext _db = new PizzaWorldDBContext();
 
-
     public void Start()
     {
       System.Console.WriteLine("\n\n\nChoose from the following options: ");
@@ -91,8 +90,31 @@ namespace PizzaBox.Client
       string city = Console.ReadLine();System.Console.WriteLine("Enter User's First Name: ");
       System.Console.WriteLine("Enter User's State/Province Name: ");
       string state = Console.ReadLine();
-
       User u = new User(first,last,street,city,state);
+      _db.User1.Add(new Data.Entities.User1
+      {
+        FirstName = new User(first, last, street, city, state)
+        {
+          Name = new Name
+          {
+            First = u.Name.First,
+            //Last = u.Name.Last 
+          }
+        },
+          Address =  new Address
+          {
+            Street = u.Address.Street,
+            City = u.Address.City,
+            StateProvince = u.Address.StateProvince 
+          },
+        Account = new Account
+        {
+         Username = u.Account.Username,
+         Password = u.Account.Password 
+        }
+      }});
+
+      _db.SaveChanges();
       
       //Add to list of users
       System.Console.WriteLine("Congrats you're in! Here are the locations closest to you");
@@ -246,3 +268,4 @@ namespace PizzaBox.Client
 
   }
 }
+
