@@ -1,0 +1,28 @@
+@model PizzaBox.Domain.Models.Pizza
+
+<h1>Here is our Menu Choices:</h1>
+<ul>
+<form action="/Menu/ChooseToppings" method ="post">
+  <fieldset name="radiobutton">
+    <label><input type ="radio" name="Size.Name" value="Small">Small</label><br>
+    <label><input type ="radio" name="Size.Name" value="Medium">Medium</label><br>
+    <label><input type ="radio" name="Size.Name" value="Large">Large</label><br>
+  </fieldset>
+  <fieldset name="radiobutton">
+    <label><input type ="radio" name="Crust.Name" value="Deep Dish">Deep Dish (+ $1.00)</label><br>
+    <label><input type ="radio" name="Crust.Name" value="Stuffed">Stuffed (+ $1.00)</label><br>
+    <label><input type ="radio" name="Crust.Name" value="Thin">Thin</label><br>
+    <label><input type ="radio" name="Crust.Name" value="Traditional">Traditional</label><br>
+  </fieldset>
+  <fieldset name="radiobutton">
+    <label><input type ="radio" name="Topping.Name" value="Pepperoni">Pepperoni</label><br>
+    <label><input type ="radio" name="Topping.Name" value="Cheese">Cheese</label><br>
+    <label><input type ="radio" name="Topping.Name" value="Mushrooms">Mushrooms</label><br>
+    <label><input type ="radio" name="Topping.Name" value="Olives">Olives</label><br>
+  </fieldset>
+
+
+
+  <button type="submit">Next</button>
+</form>
+</ul>

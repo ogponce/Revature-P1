@@ -1,0 +1,14 @@
+@model List<PizzaBox.Domain.Models.Location>
+
+
+<h1>Here is our Location choices for you:</h1>
+
+<form action="/Menu/ChooseLocation" method ="post">
+  <fieldset name="radiobutton">
+    @foreach (var v in Model){
+    <label><input type ="radio" name="Location" value="@v.Street">@v.Street, @v.City, @v.State</label><br>
+    }
+  </fieldset>
+  <button type="submit">Next</button>
+</form>
+

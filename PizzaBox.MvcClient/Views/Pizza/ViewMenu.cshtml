@@ -1,0 +1,66 @@
+@model PizzaBox.Domain.Models.Pizza
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>| PizzaBox Menu |</title>
+</head>
+<body>
+  <header>
+      <h1>Welcome!</h1>
+  </header>
+  <h3>Here is our menu: </h3>
+
+  <ul>
+  @foreach (var v in Model.Pizzas)
+  {
+    <li>@v</li>
+    <p>Toppings are: </p>
+    <br>
+    @foreach (var i in v.Toppings)
+    {
+    <ul>
+      <li>@i.Name</li>
+    </ul>
+    }
+    <br>
+  }
+  </ul>
+
+  <h5>Substitutable options for a custom pizza: </h5><br>
+    <ul>
+      <li>Available Sizes (No additional Charges): Small, Medium, or Large </li>
+      <li>Available Crusts (Extra Fee): Deep Dish (+$1.00), Stuffed (+$1.00), Thin, or Traditional </li>
+      <li>Available Toppings (No additional Charges) (5 Toppings Max): </li><br>  
+      <ul>
+        <li>Pepperoni</li>
+        <li>Cheese</li>
+        <li>Mushroom</li>
+        <li>Olives</li>
+        <li>Ham</li>
+        <li>Pineapple</li>
+        <li>Sausage</li>
+        <li>Bacon</li>
+      </ul>
+
+    </ul>
+
+
+
+  <br>
+  <br>
+  <br>
+  <br>
+
+  
+  <ul>
+      <h4><a href="../Menu/Login">Login</a></h4>
+      <h4><a href="../Pizza/Register">Register</a></h4>
+      <h4><a href ="../Pizza/ViewLocations">View All Locations</a></h4>
+      <h4><a href="../Pizza">Home</a></h4>
+  </ul>
+  
+</body>
+</html>

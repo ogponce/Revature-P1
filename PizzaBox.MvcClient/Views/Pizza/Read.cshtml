@@ -1,0 +1,21 @@
+@model List<PizzaBox.Domain.Models.User>
+
+<!Doctype html>
+<html>
+<head></head>
+
+<body>
+
+<h3>Here is a list of current registered users:</h3>
+  
+   @foreach(var item in Model)
+    {
+      <li>@item</li>
+    }
+
+<br>
+<br>
+<br>
+<h2><a href="../Pizza">Home</a></h2>
+</body>
+</html>

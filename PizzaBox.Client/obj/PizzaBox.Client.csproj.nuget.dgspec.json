@@ -28,9 +28,6 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "/Users/Oscar/revature/Project0/PizzaBox.Data/PizzaBox.Data.csproj": {
-                "projectPath": "/Users/Oscar/revature/Project0/PizzaBox.Data/PizzaBox.Data.csproj"
-              },
               "/Users/Oscar/revature/Project0/PizzaBox.Domain/PizzaBox.Domain.csproj": {
                 "projectPath": "/Users/Oscar/revature/Project0/PizzaBox.Domain/PizzaBox.Domain.csproj"
               }
@@ -69,14 +66,14 @@
         }
       }
     },
-    "/Users/Oscar/revature/Project0/PizzaBox.Data/PizzaBox.Data.csproj": {
+    "/Users/Oscar/revature/Project0/PizzaBox.Domain/PizzaBox.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/Oscar/revature/Project0/PizzaBox.Data/PizzaBox.Data.csproj",
-        "projectName": "PizzaBox.Data",
-        "projectPath": "/Users/Oscar/revature/Project0/PizzaBox.Data/PizzaBox.Data.csproj",
+        "projectUniqueName": "/Users/Oscar/revature/Project0/PizzaBox.Domain/PizzaBox.Domain.csproj",
+        "projectName": "PizzaBox.Domain",
+        "projectPath": "/Users/Oscar/revature/Project0/PizzaBox.Domain/PizzaBox.Domain.csproj",
         "packagesPath": "/Users/Oscar/.nuget/packages/",
-        "outputPath": "/Users/Oscar/revature/Project0/PizzaBox.Data/obj/",
+        "outputPath": "/Users/Oscar/revature/Project0/PizzaBox.Domain/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -113,74 +110,6 @@
             "microsoft.entityframeworkcore": {
               "target": "Package",
               "version": "[2.2.6, )"
-            },
-            "microsoft.entityframeworkcore.design": {
-              "target": "Package",
-              "version": "[2.2.6, )"
-            },
-            "microsoft.entityframeworkcore.sqlserver": {
-              "target": "Package",
-              "version": "[2.2.6, )"
-            },
-            "microsoft.entityframeworkcore.tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.2.6, )"
-            }
-          },
-          "imports": [
-            "net461"
-          ],
-          "assetTargetFallback": true,
-          "warn": true
-        }
-      }
-    },
-    "/Users/Oscar/revature/Project0/PizzaBox.Domain/PizzaBox.Domain.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "/Users/Oscar/revature/Project0/PizzaBox.Domain/PizzaBox.Domain.csproj",
-        "projectName": "PizzaBox.Domain",
-        "projectPath": "/Users/Oscar/revature/Project0/PizzaBox.Domain/PizzaBox.Domain.csproj",
-        "packagesPath": "/Users/Oscar/.nuget/packages/",
-        "outputPath": "/Users/Oscar/revature/Project0/PizzaBox.Domain/obj/",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
-        ],
-        "configFilePaths": [
-          "/Users/Oscar/.nuget/NuGet/NuGet.Config"
-        ],
-        "originalTargetFrameworks": [
-          "netstandard2.0"
-        ],
-        "sources": {
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "netstandard2.0": {
-            "projectReferences": {
-              "/Users/Oscar/revature/Project0/PizzaBox.Data/PizzaBox.Data.csproj": {
-                "projectPath": "/Users/Oscar/revature/Project0/PizzaBox.Data/PizzaBox.Data.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "netstandard2.0": {
-          "dependencies": {
-            "NETStandard.Library": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.0.3, )",
-              "autoReferenced": true
             }
           },
           "imports": [

@@ -1,0 +1,45 @@
+@model PizzaBox.Domain.Models.Location
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Create | Location</title>
+</head>
+<body>
+  <header>
+      <h1>Location</h1>
+  </header>
+  <h3>Fill out this form to continue:</h3>
+      <form action="/Menu/CreateLocation" method ="post">
+
+        <label for="Street">Street:</label>
+        <input type="text" id = "Street" name="Street">
+        @Html.ValidationMessageFor(m =>m.Street)
+        <br>
+
+        <label for="City">City:</label>
+        <input type="text" id = "City" name="City">
+        @Html.ValidationMessageFor(m =>m.Street)
+        <br>
+
+        <label for="State">State/Province:</label>
+        <input type="text" id = "State" name="State">
+        @Html.ValidationMessageFor(m =>m.Street)
+        <br>
+
+        <button type="submit">Create Location</button>
+      </form>
+  <ul>
+      <br>
+      <br>
+      <br>
+      <h4><a href="../Pizza">Home</a></h4>
+      <h4><a href="../Pizza/ManagerLogin">Manager Login</a></h4>
+
+  </ul>
+</body>
+</html>

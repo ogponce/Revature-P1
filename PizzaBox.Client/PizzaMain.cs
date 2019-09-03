@@ -13,8 +13,8 @@ namespace PizzaBox.Client
       public static List<Location> ListofLocations = new List<Location>();
         static void Main(string[] args)
         {
-            Menu m = new Menu();
-            m.Start();
+            // Menu m = new Menu();
+            // m.Start();
             // makeLocation();
             // displayLocations();
             // //makeChicago();
@@ -25,52 +25,52 @@ namespace PizzaBox.Client
             takeNewOrder();
         }
 
-        public static void makeNewYork()
-        {
-          var ny = new NewYork();
-          var newyork = ny.Make();
-          System.Console.WriteLine("Price of New York Pizza is: $" + newyork.TotalPrice);
-        }
+        // public static void makeNewYork()
+        // {
+        //   var ny = new NewYork();
+        //   var newyork = ny.Make();
+        //   System.Console.WriteLine("Price of New York Pizza is: $" + newyork.TotalPrice);
+        // }
 
-        public static void makeChicago()
-        {
-          var c = new Custom();
-          List<string> top = new List<string>{"Sauce","Cheese"};
-          var custom = c.Make("","", top);
-          System.Console.WriteLine("Total will be: " + c.TotalPrice);
-        }
+        // public static void makeChicago()
+        // {
+        //   var c = new Custom();
+        //   List<string> top = new List<string>{"Sauce","Cheese"};
+        //   var custom = c.Make("","", top);
+        //   System.Console.WriteLine("Total will be: " + c.TotalPrice);
+        // }
 
-        public static void makeUser()
-        {
-          Location loc = ListofLocations[0];
+        // public static void makeUser()
+        // {
+        //   Location loc = ListofLocations[0];
           
-          //readline inputs for u1
-          //User u1 = new User("Iron","Man","111 A Street", "New York City", "New York");
-          User u1 = new User("Iron","Man","111 A Street", "New York City", "New York");
-          loc.Users.Add(u1);
-          loc.printUsers();
-        }
+        //   //readline inputs for u1
+        //   //User u1 = new User("Iron","Man","111 A Street", "New York City", "New York");
+        //   User u1 = new User("Iron","Man","111 A Street", "New York City", "New York");
+        //   loc.Users.Add(u1);
+        //   loc.printUsers();
+        // }
         
         public static void makeLocation(){
-          ListofLocations = new List<Location>
-          {
-            new Location("101 Abcde Street", "Arlington", "Texas"),
-            new Location("UTA Street","Arlington","Texas"),
-            new Location("Alameda Street","Los Angeles","California"),
-            new Location("Twin Falls Street","Irving","Texas"),
-            new Location("Airport Fwy Street","Dallas","Texas"),
-            new Location("Fourth Street","Houston","Texas")
-          };
-          Location create = new Location("","","");
-          create.loc = new List<Location>();
-          create.loc= ListofLocations;
+          // ListofLocations = new List<Location>
+          // {
+          //   new Location("101 Abcde Street", "Arlington", "Texas"),
+          //   new Location("749 UTA Street","Arlington","Texas"),
+          //   new Location("1000 Alameda Street","Los Angeles","California"),
+          //   new Location("1636 Twin Falls Street","Irving","Texas"),
+          //   new Location("1234 Airport Fwy Street","Dallas","Texas"),
+          //   new Location("5435 Fourth Street","Houston","Texas")
+          // };
+          // Location create = new Location("","","");
+          // create.loc = new List<Location>();
+          // create.loc= ListofLocations;
         }
 
         public static void displayLocations(){
           System.Console.WriteLine("\nHere is a list of our locations: ");
           foreach (var v in ListofLocations)
           {
-            System.Console.WriteLine("\t" + v.address.Street + ", "+ v.address.City+", " + v.address.StateProvince);
+            System.Console.WriteLine("\t" + v.Street + ", "+ v.City+", " + v.State);
           }
         }
 
@@ -101,37 +101,36 @@ namespace PizzaBox.Client
 
         public static void EatPizza()
         {
-          var l1 = ListofLocations[0];
-          var o = l1.MakeOrder();
+          var list = ListofLocations[0];
+          var order = list.MakeOrder();
           List<string> t = new List<string>{"Pepperoni", "Cheese", "Bacon"};
-          var p = new Custom().Make("Small","Thin",t);
-          //o.Pizzas.Add(p);
+          var pizza = new Custom().Make("Small","Thin",t);
           
-          l1.TakeOrder(o,p);
-          foreach(var ol in l1.Orders){
-            foreach(var pi in o.Pizzas){
-              System.Console.WriteLine("You have added a " + pi.Size.Name + " "+ pi.Name+ " pizza with a " + pi.Crust.Name + " crust.");
+          list.TakeOrder(order,pizza);
+          foreach(var v in list.Orders){
+            foreach(var i in order.Pizzas){
+              System.Console.WriteLine("You have added a " + i.Size.Name + " "+ i.Name+ " pizza with a " + i.Crust.Name + " crust.");
               // System.Console.ReadLine("Would you like to add anything else?");
             }
           }
         }
 
-        public static void makeInventory()
-        {
-          ListofLocations[0].Inventory = new Dictionary<string, int>();
-          ListofLocations[0].Inventory.Add("Small Dough",50);
-          ListofLocations[0].Inventory.Add("Medium Dough",50);
-          ListofLocations[0].Inventory.Add("Large Dough",50);
-          ListofLocations[0].Inventory.Add("Thin Crust",50);
-          ListofLocations[0].Inventory.Add("Stuffed Crust",50);
-          ListofLocations[0].Inventory.Add("Traditional Crust",50);
-          ListofLocations[0].Inventory.Add("Deep Dish Crust",50);
-          ListofLocations[0].Inventory.Add("Pepperonis",500);
-          ListofLocations[0].Inventory.Add("Cheese (per Pizza)",50);
-          ListofLocations[0].Inventory.Add("Bacon",5000);
-          ListofLocations[0].Inventory.Add("Mushrooms",500);
-          ListofLocations[0].printInventory();
-        }
+        // public static void makeInventory()
+        // {
+        //   ListofLocations[0].Inventory = new Dictionary<string, int>();
+        //   ListofLocations[0].Inventory.Add("Small Dough",50);
+        //   ListofLocations[0].Inventory.Add("Medium Dough",50);
+        //   ListofLocations[0].Inventory.Add("Large Dough",50);
+        //   ListofLocations[0].Inventory.Add("Thin Crust",50);
+        //   ListofLocations[0].Inventory.Add("Stuffed Crust",50);
+        //   ListofLocations[0].Inventory.Add("Traditional Crust",50);
+        //   ListofLocations[0].Inventory.Add("Deep Dish Crust",50);
+        //   ListofLocations[0].Inventory.Add("Pepperonis",500);
+        //   ListofLocations[0].Inventory.Add("Cheese (per Pizza)",50);
+        //   ListofLocations[0].Inventory.Add("Bacon",5000);
+        //   ListofLocations[0].Inventory.Add("Mushrooms",500);
+        //   ListofLocations[0].printInventory();
+        // }
 
 
     }

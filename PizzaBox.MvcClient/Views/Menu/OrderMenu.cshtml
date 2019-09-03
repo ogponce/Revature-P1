@@ -1,0 +1,14 @@
+@model PizzaBox.Domain.Models.Pizza
+
+<h1>Here is our Menu Choices:</h1>
+<ul>
+<form action="/Menu/OrderMenu" method ="post">
+  <fieldset name="radiobutton">
+    <label><input type ="radio" name="Pizza" value="California">California</label><br>
+    <label><input type ="radio" name="Pizza" value="Chicago">Chicago</label><br>
+    <label><input type ="radio" name="Pizza" value="Custom">Custom</label><br>
+    <label><input type ="radio" name="Pizza" value="New York">New York</label><br>
+  </fieldset>
+  <button type="submit">Next</button>
+</form>
+</ul>

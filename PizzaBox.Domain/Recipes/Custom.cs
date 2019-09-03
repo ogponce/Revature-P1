@@ -13,8 +13,8 @@ namespace PizzaBox.Domain.Recipes
     {
       Pizza custom = new Pizza();
       custom.Name = "Custom"; 
-      custom.Crust= new Crust(c);
-      custom.Size = new Size(s);
+      custom.Crust= new Crust(){Name = c};
+      custom.Size = new Size(){Name = s};
       custom.Toppings = new List<Topping>();
 
       int i = 0;
@@ -22,7 +22,7 @@ namespace PizzaBox.Domain.Recipes
       {
         custom.Toppings = new List<Topping>
         {
-          new Topping("Sauce"), new Topping("Cheese"),
+          new Topping(){Name = "Pepperoni"}, new Topping(){Name = "Cheese"},
         };      
         System.Console.WriteLine("Topping: " + custom.Toppings[0].Name+" has been added!");
         System.Console.WriteLine("Topping: " + custom.Toppings[1].Name+" has been added!");
@@ -31,7 +31,7 @@ namespace PizzaBox.Domain.Recipes
       {
         foreach(var v in t){
         if(i<5){
-          custom.Toppings.Add(new Topping(v));
+          custom.Toppings.Add(new Topping(){Name = v});
           System.Console.WriteLine("Topping: " + v+" has been added!");
         }
         
@@ -44,11 +44,11 @@ namespace PizzaBox.Domain.Recipes
       
       
       if(custom.Size.Name.Length < 5){
-        custom.Size = new Size("Medium");
+        custom.Size = new Size(){Name = "Medium"};  
       }
 
       if(custom.Crust.Name.Length < 4){
-        custom.Crust = new Crust("Traditional");
+        custom.Crust = new Crust(){Name = "Traditional"};
       }
 
       

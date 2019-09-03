@@ -11,14 +11,14 @@ namespace PizzaBox.Domain.Recipes
     {
       Pizza c = new Pizza();
       c.Name = "California"; 
-      c.Crust= new Crust("Stuffed");
+      c.Crust= new Crust(){Name = "Stuffed"};
       c.Toppings = new List<Topping>
       {
-        new Topping("Pepperoni"), new Topping("Double Cheese"),
-        new Topping("Bacon")
+        new Topping(){Name = "Pepperoni"}, new Topping(){Name = "Cheese"},
+        new Topping(){Name = "Bacon"}
       };
       
-      c.Size = new Size("Large");
+      c.Size = new Size(){Name = "Large"};  
       c.TotalPrice =7.00M;
 
 

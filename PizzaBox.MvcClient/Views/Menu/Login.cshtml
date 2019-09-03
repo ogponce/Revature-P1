@@ -1,0 +1,41 @@
+@model PizzaBox.Domain.Models.User
+@{
+  
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>PizzaBox | Login</title>
+</head>
+<body>
+  <header>
+      <h1>Login</h1>
+  </header>
+  <h3>Login to continue:</h3>
+      <form id="myForm" action="/Menu/Login" method ="post">
+        <!-- Html.ValidationMessageFor(m => m.Username) -->
+        <label for="UserName">Username:</label>
+        <input type="text" id = "UserName" name="Username"><br>
+
+        <label for="Password">Password:</label>
+        <input type="text" id = "Password" name="Password"><br>
+        @Html.AntiForgeryToken()
+
+        <button type="submit">Log In</button>
+      </form> 
+  <ul>
+      <h6><a href="../Pizza">Home</a></h4>
+      <h6><a href="../Pizza/Register">Register</a></h4>
+
+  </ul>
+
+
+</body>
+
+
+
+</html>

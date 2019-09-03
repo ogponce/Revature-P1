@@ -786,6 +786,19 @@
         "compile": {
           "ref/netstandard1.3/System.Threading.Tasks.dll": {}
         }
+      },
+      "PizzaBox.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "microsoft.entityframeworkcore": "2.2.6"
+        },
+        "compile": {
+          "bin/placeholder/PizzaBox.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PizzaBox.Domain.dll": {}
+        }
       }
     }
   },
@@ -3203,11 +3216,17 @@
         "system.threading.tasks.4.0.11.nupkg.sha512",
         "system.threading.tasks.nuspec"
       ]
+    },
+    "PizzaBox.Domain/1.0.0": {
+      "type": "project",
+      "path": "../PizzaBox.Domain/PizzaBox.Domain.csproj",
+      "msbuildProject": "../PizzaBox.Domain/PizzaBox.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
       "NETStandard.Library >= 2.0.3",
+      "PizzaBox.Domain >= 1.0.0",
       "microsoft.entityframeworkcore >= 2.2.6",
       "microsoft.entityframeworkcore.design >= 2.2.6",
       "microsoft.entityframeworkcore.sqlserver >= 2.2.6",
@@ -3241,7 +3260,11 @@
       },
       "frameworks": {
         "netstandard2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/Oscar/revature/Project0/PizzaBox.Domain/PizzaBox.Domain.csproj": {
+              "projectPath": "/Users/Oscar/revature/Project0/PizzaBox.Domain/PizzaBox.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

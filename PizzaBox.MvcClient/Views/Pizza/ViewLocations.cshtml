@@ -1,0 +1,30 @@
+@model PizzaBox.Domain.Models.Location
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>PizzaBox | Locations</title>
+</head>
+<body>
+  <header>
+      <h1>Locations</h1>
+  </header>
+  <h3>Here is a list of our locations: </h3>
+  <br><br><br>
+  <ul>
+  @foreach (var v in Model.Locations)
+{
+  <li>@v</li>
+}
+</ul>
+
+  <br><br><br>   
+  <ul>
+      <h4><a href="../Pizza">Home</a></h4>
+  </ul>
+</body>
+</html>

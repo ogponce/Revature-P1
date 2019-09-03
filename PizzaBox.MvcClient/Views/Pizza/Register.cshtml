@@ -1,0 +1,59 @@
+@model PizzaBox.Domain.Models.User
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>PizzaBox | Register</title>
+</head>
+<body>
+  <header>
+      <h1>Register</h1>
+  </header>
+  <h3>Fill out this form to continue:</h3>
+      <form action="/Pizza/Register" method ="post">
+
+        <label for="First">First Name:</label>
+        <input type="text" id = "First" name="FirstName">
+        @Html.ValidationMessageFor(m =>m.FirstName)
+        <br>
+
+
+        <label for="Last">Last Name:</label>
+        <input type="text" id = "Last" name="LastName"><br>
+
+        <label for="UserName">Username:</label>
+        <input type="text" id = "UserName" name="Username">
+                @Html.ValidationMessageFor(m =>m.Username)
+                <br>
+
+
+        <label for="Password">Password:</label>
+        <input type="password" id = "Password" name="Password"><br>
+        
+        <label for="Street">Street:</label>
+        <input type="text" id="Street" name="Street"><br>
+        
+        <label for="City">City:</label>
+        <input type="text" id ="City" name="City"><br>
+
+        <label for="State">State/Province:</label>
+        <input type="text" id = "State" name="State"><br>
+
+
+        
+        <button type="submit">Register</button>
+      </form>
+  <ul>
+      <br>
+      <br>
+      <br>
+      <h6><a href="../Pizza">Home</a></h4>
+      <h6><a href="../Menu/Login">Login</a></h4>
+
+  </ul>
+</body>
+</html>

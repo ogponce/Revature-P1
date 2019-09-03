@@ -1,14 +1,17 @@
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using PizzaBox.Domain.Abstracts;
 
 namespace PizzaBox.Domain.Models
 {
-  public class Topping: AIngredient
+  public class Topping//: AIngredient
   {
-    public Topping(string name) : base(name){    }
+    [ForeignKey("ToppingId")]
+    public int ToppingId {get;set;}
+    [Required]
+    public string Name {get;set;}
+    public decimal Price {get;set;}
+    public Topping(){    }
     
-    public void toppingPrices(){
-      
-     
-    }
   }
 }
