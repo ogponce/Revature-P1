@@ -1,0 +1,16 @@
+@model PizzaBox.Domain.Models.Order
+
+
+<h1>Confirm Order</h1>
+<br><br>
+<p>Order for: @Model.user.FirstName</p><br>
+<p>From: @Model.OrderLocation</p><br>
+<p>Here is what you ordered: </p>
+
+@foreach(var o in Model.Pizzas)
+{
+  <li>@o</li>
+}
+
+<h4><a href="../Menu/ConfirmOrder">Continue</a></h4>
+<h4><a href="../Pizza">Home</a></h4>

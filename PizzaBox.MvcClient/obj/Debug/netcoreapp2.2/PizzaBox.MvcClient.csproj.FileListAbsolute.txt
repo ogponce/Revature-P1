@@ -50,3 +50,6 @@
 /Users/Oscar/revature/Project0/PizzaBox.MvcClient/obj/Debug/netcoreapp2.2/Razor/Views/Menu/Login.g.cshtml.cs
 /Users/Oscar/revature/Project0/PizzaBox.MvcClient/obj/Debug/netcoreapp2.2/Razor/Views/Menu/ChooseToppings.g.cshtml.cs
 /Users/Oscar/revature/Project0/PizzaBox.MvcClient/obj/Debug/netcoreapp2.2/Razor/Views/Menu/AddMore.g.cshtml.cs
+/Users/Oscar/revature/Project0/PizzaBox.MvcClient/obj/Debug/netcoreapp2.2/Razor/Views/Menu/ConfirmOrder.g.cshtml.cs
+/Users/Oscar/revature/Project0/PizzaBox.MvcClient/obj/Debug/netcoreapp2.2/Razor/Views/Menu/DisplayOrder.g.cshtml.cs
+/Users/Oscar/revature/Project0/PizzaBox.MvcClient/obj/Debug/netcoreapp2.2/Razor/Views/Menu/AddMorePizzas.g.cshtml.cs

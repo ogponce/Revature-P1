@@ -119,7 +119,8 @@ namespace PizzaBox.MvcClient.Controllers
       
       public IActionResult OrderMenu()
       {        
-        return View();
+        Pizza p = new Pizza();
+        return View(p);
       }
 
       [HttpPost]
@@ -127,12 +128,14 @@ namespace PizzaBox.MvcClient.Controllers
       {
         if(p.Name == "Custom")
         {
+          //Current.Pizzas.Add(p);
           return RedirectToAction("ChooseToppings");
         }
 
         else
         {
-          System.Console.WriteLine("\n\n\n" + p.Name + "\n\n\n");
+          //Current.Pizzas.Add(p);
+          //System.Console.WriteLine("\n\n\n" + p.Name + "\n\n\n");
           return RedirectToAction("AddMore","Menu",Current);
         }
       }
@@ -204,7 +207,22 @@ namespace PizzaBox.MvcClient.Controllers
       return View();
     }
 
+    public IActionResult DisplayOrder()
+    {
+      return View(Current);
+    }
+
+    public IActionResult AddMore()
+    {
+      return View(Current);
+    }
+    public IActionResult ConfirmOrder()
+    {
+      return View();
+    }
 
 
     }
+
+    
 }
