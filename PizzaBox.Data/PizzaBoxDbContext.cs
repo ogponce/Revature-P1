@@ -6,8 +6,6 @@ namespace PizzaBox.Data
   public class PizzaBoxDbContext: DbContext
   {
     public DbSet<User> Users { get; set; }
-    public DbSet<Account> Accounts {get;set;}
-
     public DbSet<Location> Locations {get;set;}
 
     public DbSet<Pizza> Pizzas {get;set;}
@@ -32,7 +30,6 @@ namespace PizzaBox.Data
     {
       builder.Entity<User>().HasKey(u => u.UserId);
       builder.Entity<User>().HasIndex(u => u.Username).IsUnique();
-      builder.Entity<Account>().HasKey(a => a.AccountId);
       builder.Entity<Pizza>().HasKey(p => p.PizzaId);
       builder.Entity<Location>().HasKey(l=>l.LocationId);
       builder.Entity<Size>().HasKey(s=>s.SizeId);
