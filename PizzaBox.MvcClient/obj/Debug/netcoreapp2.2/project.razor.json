@@ -1,0 +1,16 @@
+{
+  "FilePath": "/Users/Oscar/revature/Project0/PizzaBox.MvcClient/PizzaBox.MvcClient.csproj",
+  "Configuration": {
+    "ConfigurationName": "MVC-2.1",
+    "LanguageVersion": "2.1",
+    "Extensions": [
+      {
+        "ExtensionName": "MVC-2.1"
+      }
+    ]
+  },
+  "ProjectWorkspaceState": null,
+  "RootNamespace": "PizzaBox.MvcClient",
+  "Documents": [],
+  "SerializationFormat": "0.2"
+}

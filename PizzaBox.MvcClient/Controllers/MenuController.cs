@@ -92,7 +92,6 @@ namespace PizzaBox.MvcClient.Controllers
           return View();      
       }
       
-      
       public IActionResult CreateLocation()
       {
         return View();
@@ -126,33 +125,19 @@ namespace PizzaBox.MvcClient.Controllers
       [HttpPost]
       public IActionResult OrderMenu(Pizza p)
       {
-        if(p.Name == "Custom")
-        {
-          //Current.Pizzas.Add(p);
-          return RedirectToAction("ChooseToppings");
-        }
+        if(p.Name == "Custom"){return RedirectToAction("ChooseToppings");}
 
-        else
-        {
-          //Current.Pizzas.Add(p);
-          //System.Console.WriteLine("\n\n\n" + p.Name + "\n\n\n");
-          return RedirectToAction("AddMore","Menu",Current);
-        }
+        else {return RedirectToAction("AddMore","Menu",Current);}
       }
 
       public IActionResult ChooseLocation(Order o)
       {
-
-        // Current.user = new User();
-        // Current.user = o.user;
         List<Location> nearby = new List<Location>();
         foreach (var l in _db.Locations)
         {
           if(Current.user.City == l.City && Current.user.State == l.State){
             nearby.Add(l);
           }
-          //System.Console.WriteLine("\n\n\n\n"+Current.user.City+"\n\n\n\n");
-          // System.Console.WriteLine("\n\n\n\n"+Current.user.City+"\n\n\n\n");
         }
         return View(nearby);
       }
@@ -175,7 +160,6 @@ namespace PizzaBox.MvcClient.Controllers
     {
         Current = new Order();
         Current.user = new User();
-        //Current.user.Username = new string();
         foreach (var u in _db.Users)
         {
           if(u.Username == cur.Username){

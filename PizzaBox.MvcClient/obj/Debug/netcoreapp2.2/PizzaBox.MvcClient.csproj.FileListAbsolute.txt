@@ -53,3 +53,4 @@
 /Users/Oscar/revature/Project0/PizzaBox.MvcClient/obj/Debug/netcoreapp2.2/Razor/Views/Menu/ConfirmOrder.g.cshtml.cs
 /Users/Oscar/revature/Project0/PizzaBox.MvcClient/obj/Debug/netcoreapp2.2/Razor/Views/Menu/DisplayOrder.g.cshtml.cs
 /Users/Oscar/revature/Project0/PizzaBox.MvcClient/obj/Debug/netcoreapp2.2/Razor/Views/Menu/AddMorePizzas.g.cshtml.cs
+/Users/Oscar/revature/Project0/PizzaBox.MvcClient/obj/Debug/netcoreapp2.2/Razor/Views/Menu/UserOrderHistory.g.cshtml.cs

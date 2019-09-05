@@ -46,8 +46,6 @@ namespace MvcWorld.Client.Controllers
     public ViewResult Read()
     {
       return View(_db.Users.ToList());
-      //return View(_db.Accounts.ToList());
-
     }
     
     
@@ -96,29 +94,17 @@ namespace MvcWorld.Client.Controllers
       {
         _db.Pizzas.AddRange(item);
       }
-      //_db.SaveChanges();
       return View(p);
     }
 
     public IActionResult ViewLocations()
     {
       Location location = new Location();
-      location.Locations = new List<Location>
+      location.Locations = new List<Location>(); 
+      foreach (var item in _db.Locations)
       {
-        new Location{Street ="101 Abcde Street",City= "Arlington",State= "Texas"},
-        new Location{Street ="121 UTA Street", City = "Arlington", State ="Texas"},
-        new Location{Street ="1000 Alameda Street",City = "Los Angeles",State ="California"},
-        new Location{Street="1212 Division Street",City="Fort Worth",State="Texas"},
-        new Location{Street="5555 Airport Fwy Street",City="Dallas",State="Texas"},
-        new Location{Street="123 Fourth Street",City="Houston",State="Texas"}
-      }; 
-      
-// foreach (var item in location.Locations)
-//       {
-//         _db.Locations.Add(item);
-//       }
-//       _db.SaveChanges(); 
-
+        location.Locations.Add(item);
+      }
       return View(location);
     }
   }

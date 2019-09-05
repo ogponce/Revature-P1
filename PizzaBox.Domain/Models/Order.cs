@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using PizzaBox.Domain.Abstracts;
-//using db = PizzaBox.Entities;
 
 namespace PizzaBox.Domain.Models
 {
@@ -22,15 +21,6 @@ namespace PizzaBox.Domain.Models
         }
       }     
     }
-
-    // public void Print(){
-    //   System.Console.WriteLine("Name: " + user.FirstName + "\nOrdered: ");
-    //   foreach(var v in Pizzas)
-    //   {
-    //     System.Console.WriteLine("\t" + v);
-    //   }
-    //   System.Console.WriteLine(" from " + OrderLocation.LocationId + "\n Total Price: $" + TotalPrice);
-    // }
 
     public Order(){
         Pizzas = new List<Pizza>();
